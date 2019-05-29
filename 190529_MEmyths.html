@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="190529_MEmyths_files/remark-css/default.css" rel="stylesheet" />
+    <link href="190529_MEmyths_files/remark-css/robot-fonts.css" rel="stylesheet" />
+    <link href="190529_MEmyths_files/remark-css/hygge.css" rel="stylesheet" />
+    <link rel="stylesheet" href="myfooter.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+layout: true
+
+background-image: url(img/logoLUMC.png)
+background-position: 97% 95%
+background-size: 7%
+
+&lt;div class="my-footer"&gt;&lt;span&gt;Twitter: @MvanSmeden    
+&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;
+&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;
+Montreal, May 29 2019&lt;/span&gt;&lt;/div&gt; 
+
+---
+
+class: center, middle
+
+# Five myths about measurement error
+
+.large[Maarten van Smeden, PhD]
+
+&lt;br/&gt;
+
+assistant professor
+
+Leiden University Medical Center, department of Clinical Epidemiology, Netherlands
+
+M.van_Smeden@lumc.nl
+
+&lt;br/&gt;
+
+CORE seminar, McGill University, Montreal
+
+---
+
+
+
+layout: true
+
+background-image: url(img/logoLUMC.png)
+background-position: 97% 95%
+background-size: 7%
+
+&lt;div class="my-footer"&gt;&lt;span&gt;Twitter: @MvanSmeden    
+&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;
+&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;
+Montreal, May 29 2019&lt;/span&gt;&lt;/div&gt; 
+
+---
+class: center,top, inverse
+background-image: url(img/week8.png)
+background-size: cover
+--
+
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;br/&gt;
+
+## Gestational age: 8 weeks, 5 days
+
+--
+
+## CERTAINTY?
+
+
+
+---
+class: center,bottom
+background-image: url(img/ultrasound.jpg)
+background-size: cover
+
+## Super accurate modern ultrasound, right?
+--
+
+---
+class: center,top
+background-image: url(img/ultrasound.jpg)
+background-size: cover
+
+&lt;br/&gt;
+&lt;br/&gt;
+
+![](img/Mook2010.png)
+--
+
+&lt;br/&gt;
+&lt;br/&gt;
+
+.content-box-gray[GA up to ~ 7 days underestimated = **measurement error**]
+
+--
+
+&lt;br/&gt;
+
+
+.content-box-gray[Patient management guided by GA:]
+
+--
+
+.content-box-gray[e.g. in case of preterm labor: medication (34w), resuscitation (24w) etc.]
+
+---
+class: middle,top,inverse
+
+### What is the burden of measurement error in epidemiology?
+
+---
+
+### Terminology and notation
+
+&lt;br/&gt;
+
+- **Exposure**: covariate of interest 
+
+      *conventional notation:* A
+
+- **Confounders**: covariates to be taken into account, not of direct interest 
+
+      *conventional notation:* L = L1,...,Lp
+
+- **Outcome**: the response variable
+
+      *conventional notation:* Y
+
+--
+&lt;br/&gt;
+
+- I'll talk about measurement error in a broad sense: **including misclassification**
+
+- Variables with error are often given an asterisk or *star* (e.g. A*)
+
+
+
+
+---
+
+
+class: left,top
+
+### Measurement error in epidemiology (2001)
+
+&lt;img src="img/JurekSR2006.png" width="80%" style="display: block; margin: auto 0 auto auto;" /&gt;
+
+--
+
+- 57 papers: 61% mention measurement error in exposure
+
+--
+
+    - 1 **quantitative** approach to measurement error
+    
+    - 16 **qualitative** approach to measurement error 
+        - e.g. non-differential measurement error -&gt; attenuation
+
+---
+class: left,top
+
+### Measurement error in epidemiology (2001)
+
+&lt;img src="img/JurekSR2006.png" width="80%" style="display: block; margin: auto 0 auto auto;" /&gt;
+
+
+-  "**Only one** of these studies had an exposure (gender) that, in our opinion, could have been measured with a **negligible amount of [measurement error]**"
+---
+
+### Measurement error in 2016
+
+&lt;img src="img/BrakenhoffSR2018.png" width="80%" style="display: block; margin: auto 0 auto auto;" /&gt;
+
+--
+
+- Measurement error mentioned in exposure/confounders:
+
+    - **56%** in top-ranked **epidemiology** journals (N = 337) (vs 61% in 2001)
+
+    - **25%** in top-ranked **general medicine** journals (N = 228)
+    
+    - **3% quantitative** approaches to measurement error
+
+---
+class: left,top
+
+### Measurement error in 2016
+
+&lt;img src="img/BrakenhoffSR2018.png" width="80%" style="display: block; margin: auto 0 auto auto;" /&gt;
+
+- Simple heuristics among measurement error mentioning articles:
+
+    - measurement error **structure**: e.g. non-differential error (~30%)
+
+    - measurement error **impact**: e.g. "attenuation bias" (~50%)
+    
+    - measurement error **solutions**: e.g. unsolvable problem
+    
+
+---
+class: center,top, inverse
+background-image: url(img/myths.png)
+background-size: cover
+
+
+---
+class: middle,center,inverse
+
+## Myth 1 
+### Measurement error can be compensated by a large number of observations 
+
+---
+class: middle,center
+
+&lt;img src="img/Mayer2018snip.png" width="750px" style="display: block; margin: auto;" /&gt;
+
+.my-refs[Int Medicine, 2018, doi: 10.1111/joim.12721]
+---
+
+
+### Let's say we have 80 patients
+
+![](190529_MEmyths_files/figure-html/unnamed-chunk-6-1.gif)&lt;!-- --&gt;
+
+
+---
+
+### Measurement error
+
+![](190529_MEmyths_files/figure-html/unnamed-chunk-7-1.gif)&lt;!-- --&gt;
+
+---
+
+### Precision (estimating a mean)
+
+![](190529_MEmyths_files/figure-html/unnamed-chunk-8-1.gif)&lt;!-- --&gt;
+
+---
+
+### Bias (measurement error in X)
+
+![](190529_MEmyths_files/figure-html/unnamed-chunk-9-1.gif)&lt;!-- --&gt;
+
+
+---
+
+
+###  Masking (measurement error in Y)
+
+![](190529_MEmyths_files/figure-html/unnamed-chunk-10-1.gif)&lt;!-- --&gt;
+
+---
+
+### Tripple Whammy of Measurement Error
+.my-refs[Carroll et al. Measurement Error in Nonlinear Models: A Modern Perspective, ISBN: 9781584886334]
+
+Larger N:
+
+- compensate for "lost" **precision** or power of exposure effect estimate due to measurement error
+    
+    - compensation may require more than 50 times the sample size
+    
+    - precision and power doesn't always reduce with measurement error
+
+&lt;br/&gt;
+--
+
+Large N has no direct effect on:
+
+- Measurement error **bias** in exposure effect estimate
+
+- Measurement error **masking** of functional relations
+
+
+.my-refs[Carroll et al. Measurement Error in Nonlinear Models: A Modern Perspective, ISBN: 9781584886334]
+
+
+---
+
+### (non)differential and (in)dependent error
+
+&lt;br/&gt;
+
+- Univariate measurement error
+
+      - measurement error in A&amp;#42; is **nondifferential** IF error is independent of Y
+      
+      - measurement error in Y&amp;#42; is **nondifferential** IF error is independent of A
+
+&lt;br/&gt;
+--
+
+- Multivariate measurement error (also called joint measurement error)
+
+      - measurement error in A&amp;#42; is **independent** IF error is independent of the **error** in Y&amp;#42;
+      
+      - measurement error in Y&amp;#42; is **independent** IF error is independent of the **error** in A&amp;#42; 
+
+
+---
+class: center, middle, inverse
+
+
+## Myth 2
+### The effect of exposure is underestimated when variables are measured with error 
+
+
+---
+class: center, middle
+
+
+&lt;img src="img/Hantikainen2018snip.png" width="750px" style="display: block; margin: auto;" /&gt;
+
+.my-refs[J Int Epidemiol, 2018, doi: 10.1093/ije/dyy220]
+
+---
+class: center, middle,
+
+&lt;img src="img/Bai2018snip.png" width="750px" style="display: block; margin: auto;" /&gt;
+
+.my-refs[Am J Epidemiol, 2018, doi: 10.1093/aje/kwy194]
+
+---
+
+### Remember? 
+
+![](190529_MEmyths_files/figure-html/unnamed-chunk-13-1.gif)&lt;!-- --&gt;
+
+
+---
+
+### Underestimation vs bias
+
+- Attenuation bias is defined as an expectation, can't say: "effect Z is underestimated in study Y because measurement error in X"
+
+&lt;br/&gt;
+
+&lt;img src="img/biasvariance1.png" width="500px" style="display: block; margin: auto;" /&gt;
+
+---
+
+### Underestimation vs bias
+
+- Attenuation bias is defined as an expectation, can't say: "effect Z is underestimated in study Y because measurement error in X"
+
+&lt;br/&gt;
+
+&lt;img src="img/biasvariance2.png" width="500px" style="display: block; margin: auto;" /&gt;
+
+---
+
+### Underestimation vs bias
+
+- Attenuation bias is defined as an expectation, can't say: "effect Z is underestimated in study Y because measurement error in X"
+
+&lt;br/&gt;
+
+&lt;img src="img/biasvariance3.png" width="500px" style="display: block; margin: auto;" /&gt;
+
+---
+
+### Underestimation vs bias
+
+- Attenuation bias is defined as an expectation, can't say: "effect Z is underestimated in study Y because measurement error in X"
+
+&lt;br/&gt;
+
+&lt;img src="img/biasvariance4.png" width="500px" style="display: block; margin: auto;" /&gt;
+
+---
+
+
+### Attenuation bias:
+
+- The error is in the **exposure**
+
+- The error is **nondifferential, non-systematic, additive error**
+
+- Effect estimated is **not** effect modification, interaction, or mediation
+
+- **not a discrete variable** with  3 or more categories 
+
+- **no other variables measured with error** 
+
+---
+
+### Categorical exposure 
+
+&lt;img src="190529_MEmyths_files/figure-html/unnamed-chunk-18-1.gif" style="display: block; margin: auto;" /&gt;
+
+---
+
+### Other variables measured with error
+
+.my-refs[Brakenhoff, PlosOne, 2018; doi:10.1371/journal.pone.0192298]
+
+&lt;img src="img/BrakenhoffME2018.png" width="500px" style="display: block; margin: auto 0 auto auto;" /&gt;
+
+&lt;br/&gt;
+
+- Cox proportional hazards models
+
+- Outcome: cardiovascular event (MI, stroke, or cardiovascular death)
+
+- Simulated nondifferential error to exposure and 1 confounder variable 
+
+
+--
+
+- Data and code available: github.com/timobrakenhoff/RandomME
+
+
+---
+
+### Other variables measured with error
+&lt;img src="img/BrakenhoffExample0.png" width="700px" style="display: block; margin: auto;" /&gt;
+
+.my-refs[Brakenhoff, PlosOne, 2018; doi:10.1371/journal.pone.0192298]
+
+---
+
+### Other variables measured with error
+&lt;img src="img/BrakenhoffExample1.png" width="700px" style="display: block; margin: auto;" /&gt;
+
+.my-refs[Brakenhoff, PlosOne, 2018; doi:10.1371/journal.pone.0192298]
+
+---
+
+### Other variables measured with error
+&lt;img src="img/BrakenhoffExample2.png" width="700px" style="display: block; margin: auto;" /&gt;
+
+.my-refs[Brakenhoff, PlosOne, 2018; doi:10.1371/journal.pone.0192298]
+
+---
+class:middle,center
+
+
+&lt;img src="img/Carroll2005Folklore.png" width="600px" style="display: block; margin: auto;" /&gt;
+
+
+.my-refs[Carroll, Encyclopedia of Biostatistics, 2005; doi:10.1002/0470011815.b2a03082]
+
+---
+class: center, middle, inverse
+
+
+## Myth 3
+### Exposure measurement error is nondifferential if measurements are taken without knowledge of the outcome
+
+---
+class: center, middle
+
+&lt;img src="img/Hantikainen2018snip1.png" width="750px" style="display: block; margin: auto;" /&gt;
+
+.my-refs[Int J Epidemiol, 2018, doi: 10.1093/ije/dyy220]
+
+---
+class: center, middle
+
+&lt;img src="img/Lai2018snip.png" width="750px" style="display: block; margin: auto;" /&gt;
+
+.my-refs[BMJ, 2018, doi: 10.1136/bmj.k4067]
+
+
+---
+
+class: center, middle
+
+&lt;img src="img/Lai2018snip.png" width="750px" style="display: block; margin: auto;" /&gt;
+
+.my-refs[BMJ, 2018, doi: 10.1136/bmj.k4067]
+
+
+---
+class: center, middle
+
+&lt;img src="img/DAG-exposure-outcome.png" width="350px" style="display: block; margin: auto;" /&gt;
+
+#### Exposure (A) and outcome (Y)
+
+.my-refs[See: Hernan and Cole, AJE, 2009, doi: 10.1093/aje/kwp293]
+
+
+---
+class: center, middle
+
+&lt;img src="img/DAG-noME.png" width="350px" style="display: block; margin: auto;" /&gt;
+
+#### Confounder (L)
+
+
+.my-refs[See: Hernan and Cole, AJE, 2009, doi: 10.1093/aje/kwp293]
+
+
+---
+class: center, middle
+
+&lt;img src="img/DAG-nondifferentialexposureME.png" width="350px" style="display: block; margin: auto;" /&gt;
+
+.my-refs[See: Hernan and Cole, AJE, 2009, doi: 10.1093/aje/kwp293]
+
+
+#### Nondifferential error in exposure
+
+---
+class: center, middle
+
+&lt;img src="img/DAG-differentialexposureME.png" width="350px" style="display: block; margin: auto;" /&gt;
+
+.my-refs[See: Hernan and Cole, AJE, 2009, doi: 10.1093/aje/kwp293]
+
+#### Differential error in exposure
+
+---
+
+### Differential error in exposure
+
+- Differential measurement error in exposure can have a particularly strong effect on exposure effect estimates and in unexpected direction
+
+&lt;br /&gt;
+
+--
+
+- Classic example: **retrospectively** collected (as in a case-control study)
+
+    - Cases have better recollection of / overreport exposure more than controls: **recall bias**
+    
+    - Interviewers or care providers who are **not blinded** to the outcome status 
+    
+    - **Different methods** of exposure measurement for cases and controls
+
+&lt;br /&gt;
+
+--
+
+- Outcome precedes registration of the exposure status
+
+---
+
+### Counter example
+
+#### "those with a strong family history of the disease have both more accurate knowledge of their family history and substantially higher future disease risk"
+
+&lt;br /&gt;
+
+- Differential measurement error in the exposure âfamily history of diseaseâ 
+
+- The nondifferential exposure measurement assumption is violated as the measurement error in exposure is not independent of the true value of the outcome
+
+
+.my-refs[quote from: White, AJE, 2003, doi: 10.1093/aje/kwf203]
+
+---
+
+### Categorization  
+
+Measurement error can change from nondifferential to differential is when the variable with error is **categorized** (in case of a continuous variable) or **collapsed** (in case of a categorical variable)
+
+&lt;img src="img/Categorization.png" width="400px" style="display: block; margin: auto;" /&gt;
+
+.my-refs[Wacholder et al, AJE, 1991, doi: 10.1093/oxfordjournals.aje.a116105]
+
+
+---
+class: middle, center, inverse
+
+## Myth 4
+### Measurement error can be prevented but not mitigated
+
+
+---
+
+.pull-left[
+![](img/thesis.png)
+
+PhD thesis (2016)
+
+&lt;a href="http://doi.org/10.13140/RG.2.2.18859.03363"&gt;DOI: 10.13140/RG.2.2.18859.03363&lt;/a&gt;
+]
+
+---
+class: center,top
+background-image: url(img/S_stercoralis.jpg)
+background-size: cover
+
+---
+class: center,top
+
+&lt;img src="img/Joseph1995.png" width="90%" style="display: block; margin: auto 0 auto auto;" /&gt;
+
+.right-column[
+&lt;img src="img/Strongyloides1.png" width="1103" /&gt;
+]
+
+--
+
+.left-column[
+
+&lt;br/&gt;
+
+.black[
+What is the prevalence of Strongyloides?
+
+&amp;#8675;
+
+What is the reference standard?
+]
+]
+
+---
+class: center,top
+
+&lt;img src="img/Joseph1995.png" width="90%" style="display: block; margin: auto 0 auto auto;" /&gt;
+
+.right-column[
+&lt;img src="img/Strongyloides2.png" width="1103" /&gt;
+]
+
+
+.left-column[
+
+&lt;br/&gt;
+
+.black[
+What is the prevalence of Strongyloides?
+
+&amp;#8675;
+
+What is the reference standard?
+]
+]
+
+---
+class: center,top
+
+&lt;img src="img/Joseph1995.png" width="90%" style="display: block; margin: auto 0 auto auto;" /&gt;
+
+.right-column[
+&lt;img src="img/Strongyloides3.png" width="1103" /&gt;
+]
+
+
+.left-column[
+
+&lt;br/&gt;
+
+
+.black[What is the prevalence of Strongyloides?
+
+&amp;#8675;
+
+What is the reference standard?
+]
+]
+
+
+---
+
+.pull-left[
+![](img/thesis.png)
+
+PhD thesis (2016)
+
+&lt;a href="http://doi.org/10.13140/RG.2.2.18859.03363"&gt;DOI: 10.13140/RG.2.2.18859.03363&lt;/a&gt;
+]
+
+.pull-right[
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;br/&gt;
+
+.content-box-gray[
+Diagnostic studies are **studies of measurement** (index test) that commonly suffer from a **measurement error problem** (reference standard)
+]
+]
+
+---
+
+&lt;img src="img/TB1.png" width="500px" style="display: block; margin: auto 0 auto auto;" /&gt;
+
+&lt;img src="img/TB2.png" width="800px" style="display: block; margin: auto;" /&gt;
+
+---
+
+### A few measurement error models
+
+Measurement of the variables with error (X) with/without truth (T) in an internal/external subset
+
+- Latent variable models: 
+
+     - multiple measures of X to approximate T
+
+--
+
+- Regression calibration 
+
+    - X is replaced by a prediction of T 
+
+
+--
+
+
+- SIMEX: 
+
+      - Error is simulated and added to X, extrapolated to estimate T effect of X
+
+
+--
+
+- MIME: 
+
+    - T is multiple imputed for individuals for whom T wasn't observed 
+
+
+---
+
+### Books
+
+&lt;img src="img/books.png" width="500px" style="display: block; margin: auto;" /&gt;
+
+
+---
+class: center, middle, inverse
+
+## Myth 5
+### Certain types of epidemiologic research are unaffected by measurement error
+
+---
+### How about randomized controlled trials?
+
+&lt;img src="img/Gyawali2018snip.png" width="700px" style="display: block; margin: auto;" /&gt;
+
+.my-refs[Trials, 2018; doi:10.1186/s13063-018-2954-3]
+
+---
+
+.my-refs[Nab, ArXiv, 2018; arxiv.org/abs/1809.07068 (under revision)"]
+
+
+&lt;img src="img/NabME2018.png" width="700px" style="display: block; margin: auto 0 auto auto;" /&gt;
+
+&lt;br/&gt;
+
+--
+
+- If measurement error is **classical**: "only" loss of power
+
+- If measurement error is **differential** or **systematic**: loss of power, inflated type-I error and bias in effect estimator
+
+    - alternative point and variance estimators suggested (see preprint)
+
+---
+
+### How about prediction models?
+
+&lt;img src="img/Kudh.png" width="700px" style="display: block; margin: auto;" /&gt;
+
+.my-refs[Stat Med, 2015; doi: 10.1002/sim.6498]
+
+---
+class: center, middle
+
+&lt;img src="img/predict_models1.png" width="600px" style="display: block; margin: auto;" /&gt;
+
+
+---
+class: center, middle
+
+
+&lt;img src="img/predict_models2.png" width="600px" style="display: block; margin: auto;" /&gt;
+
+---
+
+.my-refs[Pajouheshnia, J Clin Epidemiol, 2018; doi: 10.1016/j.jclinepi.2018.09.001]
+
+
+&lt;img src="img/Pajouhesnia2018.png" width="700px" style="display: block; margin: auto 0 auto auto;" /&gt;
+
+&lt;br/&gt;
+
+--
+
+- Predictor variables with measurement error are generally **worse predictors**
+
+- Development-validation difference in measurement error can impact **discriminative performance** (area under the ROC curve)
+
+
+---
+
+&lt;img src="img/Luijken2018ME.png" width="600px" style="display: block; margin: auto 0 auto auto;" /&gt;
+
+&lt;br/&gt;
+
+.my-refs[Luijken, Stat Med, 2018, arxiv.org/abs/1806.10495 (in press)]
+
+
+--
+
+&lt;img src="img/Luijkenfig.png" width="800px" style="display: block; margin: auto 0 auto auto;" /&gt;
+
+
+---
+
+### Many more types of studies (with specific ME literature)
+
+- Mediation analyses
+- Record linkage
+- Time series analyses
+- Mendelian randomization studies
+- Genome wide association studies 
+- Negative control studies
+- Diagnostic accuracy studies
+- Disease prevalence studies 
+
+---
+class: middle, center, inverse
+
+## To summarize
+
+---
+
+### Five myths about measurement error
+
+&lt;br/&gt;
+
+1. Measurement error can be compensated by a **large number of observations**
+
+2. Effect of exposure is **underestimated** when variables are measured with error 
+
+3. Exposure measurement error is **nondifferential** if measurements are taken without knowledge of the outcome
+
+4. Measurement error can be **prevented** but not mitigated
+
+5. Certain types of epidemiologic research are **unaffected** by measurement error
+
+
+---
+
+class: middle
+
+### Correlation doesn't imply causation
+
+---
+class: middle
+
+### Correlation doesn't imply &lt;del&gt;causation&lt;/del&gt; correlation
+
+
+
+.my-refs[adapted from andrewgelman.com/2014/08/04/correlation-even-imply-correlation/]
+
+---
+
+### Article soon on ArXiv
+
+- Rolf Groenwold (Leiden)
+- Timothy Lash (Atlanta)
+
+
+---
+class: middle, center
+
+
+&lt;img src="img/social_media.png" width="300px" style="display: block; margin: auto;" /&gt;
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"countIncrementalSlides": false,
+"slideNumberFormat": ""
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
